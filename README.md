@@ -27,6 +27,7 @@ An open source MCP (Model Context Protocol) server empowering SREs with intellig
 - [How It Works](#how-it-works)
 - [MCP Client Integration](#mcp-client-integration)
 - [Performance Considerations](#performance-considerations)
+- [Official Build](#official-build)
 - [Troubleshooting](#troubleshooting)
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
@@ -1296,6 +1297,12 @@ The server handles multiple concurrent requests efficiently:
 | High-load | 1-2 | 1-2Gi | Minimal |
 
 **Note**: LUMINO requires minimal resources. ML models and training data are persisted locally in `~/.lumino/` (see [ML Model Persistence](#ml-model-persistence)). Most processing happens in the AI assistant.
+
+## Official Build
+
+The production image is built by [Konflux CI](https://konflux-ci.dev/) from an internal
+GitLab mirror and published to `quay.io/redhat-user-workloads/spre-tenant/pharos`.
+Deployments reference the image by digest. Mirror operations are documented in an internal runbook(Red Hat access required).
 
 ## Troubleshooting
 
